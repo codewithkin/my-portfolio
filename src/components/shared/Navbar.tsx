@@ -42,14 +42,29 @@ function Navbar() {
       <ul className="flex text-lg gap-8 justify-center items-center">
         {links.map((link, index: number) => {
           return (
-            <li className="text-slate-600" key={link.id}>
+            <motion.li
+            initial={{
+              opacity: 0,
+              y: 200
+            }}
+
+            animate={{
+              opacity: 1,
+              y: 1
+            }}
+
+            transition={{
+              delay: index * 0.5,
+              duration: 0.5
+            }}
+            className="text-slate-600" key={link.id}>
               <Link
                 className={`hover:text-slate-900 ${url == link.url && "underline text-secondary"}`}
                 href={link.url}
               >
                 {link.text}
               </Link>
-            </li>
+            </motion.li>
           );
         })}
       </ul>

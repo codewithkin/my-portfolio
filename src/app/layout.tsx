@@ -66,7 +66,9 @@ export default function RootLayout({
         className={`${satoshi.className} antialiased`}
       >
         <Navbar />
-        {children}
+        <main className="min-h-screen">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

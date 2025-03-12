@@ -44,7 +44,7 @@ function Navbar() {
           return (
             <li className="text-slate-600" key={link.id}>
               <Link
-                className={`hover:text-slate-900 ${url == link.url && "underline text-primary"}`}
+                className={`hover:text-slate-900 ${url == link.url && "underline text-secondary"}`}
                 href={link.url}
               >
                 {link.text}

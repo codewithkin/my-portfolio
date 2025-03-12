@@ -86,7 +86,7 @@ function Navbar() {
         href="https://calendly.com/codewithkin/15-minute-call"
         target="_blank"
       >
-        Book a meeting
+        Book a call
       </Link>
     </motion.nav>
   );

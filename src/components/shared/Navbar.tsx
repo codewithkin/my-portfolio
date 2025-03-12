@@ -47,7 +47,7 @@ function Navbar() {
       className="md:flex justify-between items-center px-16 py-8 font-medium hidden"
     >
       <Link href="/">
-        <h1 className="text-2xl font-semibold transition-all duration-300 hover:underline">
+        <h1 className="text-2xl font-bold transition-all duration-300 hover:underline">
           Kin Leon
         </h1>
       </Link>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
   title: "Kin Leon Zinzombe | Full-Stack Developer & AI Enthusiast",
@@ -63,7 +65,9 @@ export default function RootLayout({
       <body
         className={`${satoshi.className} antialiased`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

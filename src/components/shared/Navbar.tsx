@@ -9,7 +9,7 @@ function Navbar() {
         </Link>
 
         {/* Links */}
-        <ul className='flex text-md gap-4 justify-center items-center text-slate-600'>
+        <ul className='flex text-lg gap-8 justify-center items-center text-slate-600'>
             <li>
                 <Link className='hover:text-slate-900' href="/">Home</Link>
             </li>

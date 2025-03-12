@@ -1,7 +1,12 @@
+"use client";
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 function Navbar() {
+    // Get the current url
+    const url = usePathname();
+
   return (
     <nav className="flex justify-between items-center px-16 py-8 font-medium">
         <Link href="/">
@@ -11,16 +16,16 @@ function Navbar() {
         {/* Links */}
         <ul className='flex text-lg gap-8 justify-center items-center text-slate-600'>
             <li>
-                <Link className='hover:text-slate-900' href="/">Home</Link>
+                <Link className={`hover:text-slate-900 ${url === "/" && "underline text-secondary"}`} href="/">Home</Link>
             </li>
             <li>
-                <Link className='hover:text-slate-900' href="/about">About</Link>
+                <Link className={`hover:text-slate-900 ${url === "/about" && "underline text-secondary"}`} href="/about">About</Link>
             </li>
             <li>
-                <Link className='hover:text-slate-900' href="/projects">Projects</Link>
+                <Link className={`hover:text-slate-900 ${url === "/projects" && "underline text-secondary"}`} href="/projects">Projects</Link>
             </li>
             <li>
-                <Link className='hover:text-slate-900' href="/blog">Blog</Link>
+                <Link className={`hover:text-slate-900 ${url === "/blog" && "underline text-secondary"}`} href="/blog">Blog</Link>
             </li>
         </ul>
 

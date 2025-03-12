@@ -1,34 +1,34 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 function Navbar() {
   // Get the current url
   const url = usePathname();
 
-  const links: {id: number,text: string, url: string}[] = [
+  const links: { id: number; text: string; url: string }[] = [
     {
       id: 1,
       text: "Home",
-      url: "/"
+      url: "/",
     },
     {
       id: 2,
       text: "About",
-      url: "/about"
+      url: "/about",
     },
     {
       id: 3,
       text: "Projects",
-      url: "/projects"
+      url: "/projects",
     },
     {
       id: 4,
       text: "Blog",
-      url: "/blog"
-    }
-  ]
+      url: "/blog",
+    },
+  ];
 
   return (
     <nav className="flex justify-between items-center px-16 py-8 font-medium">
@@ -39,22 +39,19 @@ function Navbar() {
       </Link>
 
       {/* Links */}
-      <ul className="flex text-lg gap-8 justify-center items-center text-slate-600">
-        {
-          links.map((link, index: number) => {
-
-            return (
-              <li key={link.id}>
+      <ul className="flex text-lg gap-8 justify-center items-center">
+        {links.map((link, index: number) => {
+          return (
+            <li className="text-slate-600" key={link.id}>
               <Link
-                className={`hover:text-slate-900 ${url == link.url && "underline text-secondary"}`}
+                className={`hover:text-slate-900 ${url == link.url && "underline text-primary"}`}
                 href={link.url}
               >
                 {link.text}
               </Link>
             </li>
-            )
-          })
-        }
+          );
+        })}
       </ul>
 
       {/* CTA */}

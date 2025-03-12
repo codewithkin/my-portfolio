@@ -122,3 +122,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .heading {
+    @apply text-4xl font-semibold text-center text-primary
+  }
+}

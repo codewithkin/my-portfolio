@@ -15,9 +15,9 @@ import {
 
 function Header() {
   return (
-    <header className="flex flex-col md:flex-row md:justify-between items-center gap-16 py-20 md:px-40 md:py-60 px-4">
+    <header className="flex flex-col md:flex-row md:justify-between items-center gap-16 py-20 md:px-40 md:py-60 px-4 w-full">
       {/* Text */}
-      <article className="w-1/2 flex flex-col gap-8 justify-center items-center md:justify-start md:items-start">
+      <article className="md:w-1/2 flex flex-col gap-8 justify-center items-center md:justify-start md:items-start">
         {/* Available for work badge */}
         <Badge className="bg-green-100 border border-green-400 rounded-full px-4 py-2 text-green-400 font-medium text-md gap-2 text-sm">
           {/* Green dot */}
@@ -105,7 +105,7 @@ function Header() {
       </article>
 
       {/* Assets */}
-      <article className="flex flex-col gap-8 w-1/2">
+      <article className="flex flex-col gap-8 md:w-1/2">
         {/* Card */}
         <article className="grid grid-cols-2 gap-2 items-center">
           <article

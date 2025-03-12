@@ -31,7 +31,20 @@ function Navbar() {
   ];
 
   return (
-    <nav className="flex justify-between items-center px-16 py-8 font-medium">
+    <motion.nav
+      initial={{
+        opacity: 0,
+        display: "none",
+      }}
+      animate={{
+        opacity: 1,
+        display: "flex",
+      }}
+      transition={{
+        duration: 2
+      }}
+      className="flex justify-between items-center px-16 py-8 font-medium"
+    >
       <Link href="/">
         <h1 className="text-2xl font-semibold transition-all duration-300 hover:underline">
           Kin Leon
@@ -43,21 +56,21 @@ function Navbar() {
         {links.map((link, index: number) => {
           return (
             <motion.li
-            initial={{
-              opacity: 0,
-              y: 200
-            }}
-
-            animate={{
-              opacity: 1,
-              y: 1
-            }}
-
-            transition={{
-              delay: index * 0.5,
-              duration: 0.5
-            }}
-            className="text-slate-600" key={link.id}>
+              initial={{
+                opacity: 0,
+                y: 200,
+              }}
+              animate={{
+                opacity: 1,
+                y: 1,
+              }}
+              transition={{
+                delay: index * 0.5,
+                duration: 0.5,
+              }}
+              className="text-slate-600"
+              key={link.id}
+            >
               <Link
                 className={`hover:text-slate-900 ${url == link.url && "underline text-secondary"}`}
                 href={link.url}
@@ -77,7 +90,7 @@ function Navbar() {
       >
         Book a meeting
       </Link>
-    </nav>
+    </motion.nav>
   );
 }
 

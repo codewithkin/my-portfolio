@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://yourdomain.com"),
 };
 
-const satoshi = localFont({ 
-  src: "./fonts/Satoshi/fonts/TTF/Satoshi-Variable.ttf"
-})
+const satoshi = localFont({
+  src: "./fonts/Satoshi/fonts/TTF/Satoshi-Variable.ttf",
+});
 
 export default function RootLayout({
   children,
@@ -62,13 +62,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${satoshi.className} antialiased`}
-      >
+      <body className={`${satoshi.className} antialiased`}>
         <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

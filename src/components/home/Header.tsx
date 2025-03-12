@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Header() {
-  return (
-    <header className='min-h-screen'>
-        
-    </header>
-  )
+  return <header className="min-h-screen"></header>;
 }
 
-export default Header
+export default Header;

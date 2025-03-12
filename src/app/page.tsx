@@ -1,9 +1,7 @@
-import Header from "@/components/home/Header"
+import Header from "@/components/home/Header";
 
 function Home() {
-  return (
-    <Header></Header>
-  )
+  return <Header></Header>;
 }
 
-export default Home
+export default Home;

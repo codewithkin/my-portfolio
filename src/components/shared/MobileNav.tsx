@@ -2,13 +2,30 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { Menu, X } from "lucide-react";
+import {motion} from "framer-motion";
 
 function MobileNav() {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <nav className="flex md:hidden flex-col gap-2 items-center py-4 px-8">
-      <article className="flex justify-between items-center w-full">
+    <motion.nav 
+    initial={{
+      opacity: 0,
+      y: -100
+    }}
+
+    animate={{
+      opacity: 1,
+      y: 1
+    }}
+    
+    transition={{
+      bounce: 0
+    }}
+    className="flex md:hidden flex-col gap-2 items-center py-4 px-8 shadow-sm">
+      <article
+
+      className="flex justify-between items-center w-full">
         <article className="flex gap-2 items-center">
           <h1 className="text-2xl font-bold">Kin Leon</h1>
         </article>
@@ -24,7 +41,7 @@ function MobileNav() {
             </Button> 
         }
       </article>
-    </nav>
+    </motion.nav>
   );
 }
 

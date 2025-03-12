@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 function Header() {
   return (
-    <header className="min-h-screen flex flex-col md:flex-row md:justify-between gap-16 py-20 px-4 md:px-40">
+    <header className="flex flex-col md:flex-row md:justify-between items-center gap-16 py-20 md:px-40 md:py-60 px-4">
       {/* Text */}
       <article className="flex flex-col gap-8 justify-center items-center md:justify-start md:items-start">
         {/* Available for work badge */}

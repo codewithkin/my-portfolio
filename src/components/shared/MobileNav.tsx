@@ -17,10 +17,10 @@ function MobileNav() {
         {
             open ?
             <Button onClick={() => setOpen((prev: boolean) => !prev)} variant="outline">
-                <X size={30} strokeWidth={1} />
+                <X size={30} strokeWidth={2} />
             </Button> :
-            <Button onClick={() => setOpen((prev: boolean) => !prev)} variant="outline">
-                <Menu size={30} strokeWidth={1} />
+            <Button onClick={() => setOpen((prev: boolean) => !prev)} variant="default">
+                <Menu size={30} strokeWidth={2} />
             </Button> 
         }
       </article>

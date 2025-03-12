@@ -34,16 +34,17 @@ function Navbar() {
     <motion.nav
       initial={{
         opacity: 0,
-        display: "none",
       }}
+
       animate={{
         opacity: 1,
-        display: "flex",
       }}
+
       transition={{
         duration: 2
       }}
-      className="flex justify-between items-center px-16 py-8 font-medium"
+
+      className="md:flex justify-between items-center px-16 py-8 font-medium hidden"
     >
       <Link href="/">
         <h1 className="text-2xl font-semibold transition-all duration-300 hover:underline">

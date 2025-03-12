@@ -2,6 +2,7 @@
 import React from "react";
 import { Badge } from "../ui/badge";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 function Header() {
   return (
@@ -30,7 +31,30 @@ function Header() {
             cursor={false}
           />
 
-          <p></p>
+          <motion.p
+            initial={{
+              display: "none",
+              opacity: 0,
+              y: -200,
+            }}
+            animate={{
+              display: "flex",
+              opacity: 1,
+              y: 1,
+            }}
+
+            transition={{
+              delay: 9,
+              duration: 0.5
+            }}
+            className="text-center md:text-start md:max-w-2xl xl:max-w-3xl md:text-lg text-slate-600 font-regular"
+          >
+            A passionate software developer who loves turning ideas into real,
+            functional, and beautiful digital experiences. Whether it&apos;s a
+            sleek website, a powerful app, or a cool new feature, I bring
+            creativity, speed, and clean code to the table. Let&apos;s build
+            something awesome together!
+          </motion.p>
         </article>
       </article>
 

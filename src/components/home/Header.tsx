@@ -6,7 +6,12 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 function Header() {
   return (
@@ -123,20 +128,22 @@ function Header() {
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Badge className="rounded-full bg-transparent bg-blur text-white font-medium ml-2 text-sm backdrop-blur-3xl">
+                    <Badge className="rounded-full bg-transparent bg-blur text-white font-medium ml-2 text-sm backdrop-blur-3xl hover:cursor-pointer">
                       Fullstack Developer
                     </Badge>
                   </TooltipTrigger>
                   <TooltipContent>
-                    I am an accredited fullstack developer of 5 years. Having
-                    worked both in corporate and as a solo developer, I bring
-                    the perfect blend of professionalism and humanity that fits
-                    any budget and project
+                    <p className="max-w-xs">
+                      I am an accredited fullstack developer of 5 years. Having
+                      worked both in corporate and as a solo developer, I bring
+                      the perfect blend of professionalism and humanity that
+                      fits any budget and project
+                    </p>
                   </TooltipContent>
                 </Tooltip>
                 <Tooltip>
                   <TooltipTrigger>
-                    <Badge className="rounded-full bg-primary text-white font-medium text-sm">
+                    <Badge className="rounded-full bg-primary text-white font-medium text-sm hover:cursor-pointer">
                       $40/hr - $90/hr
                     </Badge>
                   </TooltipTrigger>

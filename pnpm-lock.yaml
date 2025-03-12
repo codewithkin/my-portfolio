@@ -31,6 +31,9 @@ importers:
       react-dom:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
+      react-type-animation:
+        specifier: ^3.2.0
+        version: 3.2.0(prop-types@15.8.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       tailwind-merge:
         specifier: ^3.0.2
         version: 3.0.2
@@ -602,6 +605,12 @@ packages:
       }
     hasBin: true
 
+  js-tokens@4.0.0:
+    resolution:
+      {
+        integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==,
+      }
+
   lightningcss-darwin-arm64@1.29.2:
     resolution:
       {
@@ -699,6 +708,13 @@ packages:
       }
     engines: { node: ">= 12.0.0" }
 
+  loose-envify@1.4.0:
+    resolution:
+      {
+        integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==,
+      }
+    hasBin: true
+
   lucide-react@0.479.0:
     resolution:
       {
@@ -751,6 +767,13 @@ packages:
       sass:
         optional: true
 
+  object-assign@4.1.1:
+    resolution:
+      {
+        integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==,
+      }
+    engines: { node: ">=0.10.0" }
+
   picocolors@1.1.1:
     resolution:
       {
@@ -779,6 +802,12 @@ packages:
     engines: { node: ">=14" }
     hasBin: true
 
+  prop-types@15.8.1:
+    resolution:
+      {
+        integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==,
+      }
+
   react-dom@19.0.0:
     resolution:
       {
@@ -786,6 +815,22 @@ packages:
       }
     peerDependencies:
       react: ^19.0.0
+
+  react-is@16.13.1:
+    resolution:
+      {
+        integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==,
+      }
+
+  react-type-animation@3.2.0:
+    resolution:
+      {
+        integrity: sha512-WXTe0i3rRNKjmggPvT5ntye1QBt0ATGbijeW6V3cQe2W0jaMABXXlPPEdtofnS9tM7wSRHchEvI9SUw+0kUohw==,
+      }
+    peerDependencies:
+      prop-types: ^15.5.4
+      react: ">= 15.0.0"
+      react-dom: ">= 15.0.0"
 
   react@19.0.0:
     resolution:
@@ -1159,6 +1204,8 @@ snapshots:
 
   jiti@2.4.2: {}
 
+  js-tokens@4.0.0: {}
+
   lightningcss-darwin-arm64@1.29.2:
     optional: true
 
@@ -1204,6 +1251,10 @@ snapshots:
       lightningcss-win32-arm64-msvc: 1.29.2
       lightningcss-win32-x64-msvc: 1.29.2
 
+  loose-envify@1.4.0:
+    dependencies:
+      js-tokens: 4.0.0
+
   lucide-react@0.479.0(react@19.0.0):
     dependencies:
       react: 19.0.0
@@ -1241,6 +1292,8 @@ snapshots:
       - "@babel/core"
       - babel-plugin-macros
 
+  object-assign@4.1.1: {}
+
   picocolors@1.1.1: {}
 
   postcss@8.4.31:
@@ -1257,10 +1310,24 @@ snapshots:
 
   prettier@3.5.3: {}
 
+  prop-types@15.8.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+
   react-dom@19.0.0(react@19.0.0):
     dependencies:
       react: 19.0.0
       scheduler: 0.25.0
+
+  react-is@16.13.1: {}
+
+  react-type-animation@3.2.0(prop-types@15.8.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+    dependencies:
+      prop-types: 15.8.1
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
 
   react@19.0.0: {}
 

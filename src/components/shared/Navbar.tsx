@@ -35,15 +35,12 @@ function Navbar() {
       initial={{
         opacity: 0,
       }}
-
       animate={{
         opacity: 1,
       }}
-
       transition={{
-        duration: 2
+        duration: 2,
       }}
-
       className="md:flex justify-between items-center px-16 py-8 font-medium hidden"
     >
       <Link href="/">

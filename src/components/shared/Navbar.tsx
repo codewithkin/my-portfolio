@@ -1,11 +1,34 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import {motion} from "framer-motion";
 
 function Navbar() {
   // Get the current url
   const url = usePathname();
+
+  const links: {id: number,text: string, url: string}[] = [
+    {
+      id: 1,
+      text: "Home",
+      url: "/"
+    },
+    {
+      id: 2,
+      text: "About",
+      url: "/about"
+    },
+    {
+      id: 3,
+      text: "Projects",
+      url: "/projects"
+    },
+    {
+      id: 4,
+      text: "Blog",
+      url: "/blog"
+    }
+  ]
 
   return (
     <nav className="flex justify-between items-center px-16 py-8 font-medium">
@@ -17,38 +40,21 @@ function Navbar() {
 
       {/* Links */}
       <ul className="flex text-lg gap-8 justify-center items-center text-slate-600">
-        <li>
-          <Link
-            className={`hover:text-slate-900 ${url === "/" && "underline text-secondary"}`}
-            href="/"
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={`hover:text-slate-900 ${url === "/about" && "underline text-secondary"}`}
-            href="/about"
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={`hover:text-slate-900 ${url === "/projects" && "underline text-secondary"}`}
-            href="/projects"
-          >
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={`hover:text-slate-900 ${url === "/blog" && "underline text-secondary"}`}
-            href="/blog"
-          >
-            Blog
-          </Link>
-        </li>
+        {
+          links.map((link, index: number) => {
+
+            return (
+              <li key={link.id}>
+              <Link
+                className={`hover:text-slate-900 ${url == link.url && "underline text-secondary"}`}
+                href={link.url}
+              >
+                {link.text}
+              </Link>
+            </li>
+            )
+          })
+        }
       </ul>
 
       {/* CTA */}

@@ -38,7 +38,11 @@ function MobileNav() {
             onClick={() => setOpen((prev) => !prev)}
             variant={open ? "outline" : "default"}
           >
-            {open ? <X size={30} strokeWidth={2} /> : <Menu size={30} strokeWidth={2} />}
+            {open ? (
+              <X size={30} strokeWidth={2} />
+            ) : (
+              <Menu size={30} strokeWidth={2} />
+            )}
           </Button>
         </article>
 

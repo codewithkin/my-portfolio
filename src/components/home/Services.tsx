@@ -13,12 +13,13 @@ import {
 } from "@/components/ui/card";
 import { services } from "@/data/services";
 import { Service } from "@/types/services";
+import { big } from "framer-motion/client";
 
 function Services() {
   return (
     <ScrollInView>
       {/* Section Heading */}
-      <article className="w-full flex md:flex-row flex-col items-center md:items-end justify-center md:justify-between gap-8 md:gap-0">
+      <article className="w-full flex md:flex-row flex-col items-center md:items-end justify-center md:justify-between gap-2 md:gap-0">
         <article className="flex flex-col gap-4 text-center md:text-start justify-center items-center md:items-start md:justify-start">
           <HeadingBadge>Services</HeadingBadge>
           <h2 className="heading">Software So Good, It Speaks for Itself</h2>
@@ -57,16 +58,17 @@ function Services() {
               `}
               style={{ backgroundImage: `url(${service.bg})` }}
             >
-              <CardHeader className="flex items-start gap-4">
+               <div className={`${service.bg ? "absolute" : "hidden"} inset-0 bg-black/50 backdrop-blur-xs`}></div>
+              <CardHeader className="flex items-start gap-4 relative z-10">
                 <article className={`rounded-full p-4 bg-gradient-to-tr from-sky-300 to-blue-600 text-white hover:cursor-pointer hover:from-blue-600 hover:to-purple-300 transition-all duration-500`}>
                   <IconComponent size={32} className="" />
                 </article>
                 <CardTitle className="text-2xl">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative z-10">
                 <p className="text-md">{service.description}</p>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="relative z-10">
                 <Button asChild variant="outline" className={`font-medium ${service.bg ? "bg-white text-primary" : "bg-primary text-white hover:bg-slate-900 hover:text-white"}`}>
                   <Link
                     className={` ${service.bg && "text-primary"} flex gap-2 transition-all duration-300 hover:gap-4 items-center`}

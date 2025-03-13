@@ -129,10 +129,10 @@
   }
 
   .main-heading {
-    @apply text-5xl font-semibold text-center
+    @apply text-5xl font-semibold text-center;
   }
 
   .header-custom {
-    @apply py-20 text-center flex flex-col justify-center items-center
+    @apply py-20 text-center flex flex-col justify-center items-center;
   }
 }

@@ -13,7 +13,8 @@ function Projects() {
 
   const filteredProjects = projects.filter(
     (project) =>
-      selectedCategory === "all" || project.badge.toLowerCase() === selectedCategory
+      selectedCategory === "all" ||
+      project.badge.toLowerCase() === selectedCategory,
   );
 
   return (
@@ -22,15 +23,22 @@ function Projects() {
       <header className="header-custom mb-8">
         <article className="flex flex-col gap-2 items-center text-center">
           <HeadingBadge>Projects</HeadingBadge>
-          <h2 className="main-heading text-primary">What I've been up to recently</h2>
+          <h2 className="main-heading text-primary">
+            What I've been up to recently
+          </h2>
           <p className="text-slate-600 text-lg">
-            The proof is in the pudding. Here are a few of my most recent personal and client projects.
+            The proof is in the pudding. Here are a few of my most recent
+            personal and client projects.
           </p>
         </article>
       </header>
 
       {/* Filtering Tabs */}
-      <Tabs defaultValue="all" onValueChange={setSelectedCategory} className="mb-8">
+      <Tabs
+        defaultValue="all"
+        onValueChange={setSelectedCategory}
+        className="mb-8"
+      >
         <TabsList className="flex justify-center gap-2">
           <TabsTrigger value="all">All</TabsTrigger>
           <TabsTrigger value="web app">Web Apps</TabsTrigger>
@@ -41,10 +49,7 @@ function Projects() {
       </Tabs>
 
       {/* Projects Grid */}
-      <motion.div 
-        layout 
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
+      <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project) => (
           <motion.div key={project.id} layout>
             <Dialog>
@@ -64,11 +69,13 @@ function Projects() {
                   </CardHeader>
                   <CardContent className="p-4">
                     <CardTitle className="text-lg">{project.name}</CardTitle>
-                    <p className="text-slate-600 text-sm">{project.description}</p>
+                    <p className="text-slate-600 text-sm">
+                      {project.description}
+                    </p>
                   </CardContent>
                 </Card>
               </DialogTrigger>
-              
+
               {/* Expanded Project Modal */}
               <DialogContent className="max-w-2xl">
                 <div className="flex flex-col items-center text-center">
@@ -83,7 +90,10 @@ function Projects() {
                   <p className="text-slate-600">{project.description}</p>
                   <div className="flex gap-3 mt-4">
                     {project.techStack.map((tech, index) => (
-                      <span key={index} className="bg-slate-200 px-3 py-1 text-sm rounded-md">
+                      <span
+                        key={index}
+                        className="bg-slate-200 px-3 py-1 text-sm rounded-md"
+                      >
                         {tech}
                       </span>
                     ))}

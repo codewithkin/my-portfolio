@@ -23,7 +23,7 @@ const ScrollInView: React.FC<ScrollInViewProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration, ease: "easeOut", delay }}
       viewport={{ once }}
-      className={`${className} mt-40 px-16 py-8`}
+      className={`${className} mt-40 px-4 md:px-16 py-8`}
     >
       {children}
     </motion.div>

@@ -2,6 +2,7 @@ import { Testimonial } from "@/types/testimonials";
 
 export const testimonials: Testimonial[] = [
   {
+    id: 1,
     imageUrl: "/images/testimonials/joshua-smith.jpg",
     name: "Joshua J Smith",
     role: "CEO, WyvenInc",
@@ -10,6 +11,7 @@ export const testimonials: Testimonial[] = [
     linkedIn: "https://www.linkedin.com/in/joshua-j-smith-5338041b8/",
   },
   {
+    id: 2,
     imageUrl: "/images/testimonials/lucky-d.jpg",
     name: "Lucky D Ncipane",
     role: "Accoutant",
@@ -18,6 +20,7 @@ export const testimonials: Testimonial[] = [
     linkedIn: "https://www.linkedin.com/in/janesmith",
   },
   {
+    id: 3,
     imageUrl: "/images/testimonials/michael-johnson.jpg",
     name: "Michael Johnson",
     role: "Founder, AI Solutions",

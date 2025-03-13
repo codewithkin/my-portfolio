@@ -4,4 +4,5 @@ export type Testimonial = {
     role: string;
     content: string;
     linkedIn: string;
+    id: number,
   };

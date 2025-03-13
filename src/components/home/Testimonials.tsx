@@ -9,13 +9,12 @@ function Testimonials() {
   return (
     <ScrollInView>
       {/* Section Heading */}
-      <article className="w-full flex md:flex-row flex-col items-center md:items-end justify-center md:justify-between gap-2 md:gap-0">
-        <article className="flex flex-col gap-4 text-center md:text-start justify-center items-center md:items-start md:justify-start">
-          <HeadingBadge>Services</HeadingBadge>
-          <h2 className="heading">Software So Good, It Speaks for Itself</h2>
+      <article className="w-full flex md:flex-row-reverse flex-col-reverse items-center md:items-end justify-center md:justify-between gap-2 md:gap-0">
+        <article className="flex flex-col gap-4 text-center md:text-end justify-center items-center md:items-end md:justify-end">
+          <HeadingBadge>Testimonials</HeadingBadge>
+          <h2 className="heading">Happy Clients, Real Results</h2>
           <p className="text-xl text-slate-600 font-regular">
-            Need a website? An app? Something totally unique? I turn ideas into
-            smooth, fast, and user-friendly software—no hassle.
+          Great software isn’t just about clean code—it’s about impact. Here’s what people I’ve worked with have to say about the products we’ve built together.
           </p>
         </article>
 

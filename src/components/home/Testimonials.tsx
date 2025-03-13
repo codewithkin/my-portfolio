@@ -89,8 +89,8 @@ function Testimonials() {
                 <Image 
                     alt="LinkedIn icon"
                     src="/images/icons/linkedin.png"
-                    width="24"
-                    height="24"
+                    width="32"
+                    height="32"
                 />
                 View on LinkedIn
               </Link>

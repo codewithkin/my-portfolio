@@ -59,7 +59,7 @@ function Testimonials() {
             className="rounded-xl bg-gradient-to-t from-slate-400 to-slate-800 text-white hover:border hover:border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 border border-slate-300 md:p-16 p-8 flex flex-col gap-8"
           >
             <Avatar className="w-16 h-16">
-              <AvatarFallback className="border-2 transition-all duration-300 border-purple-400 hover:cursor-pointer hover:border-purple-600">
+              <AvatarFallback className="border-2 transition-all duration-300 border-purple-400 hover:cursor-pointer hover:border-purple-600 text-primary font-bold text-xl">
                 {testimonial.name[0] || "P"}
               </AvatarFallback>
               <AvatarImage src={testimonial.imageUrl} />
@@ -76,7 +76,7 @@ function Testimonials() {
             <p className="text-slate-300">{testimonial.content}</p>
 
             <Button
-              className="bg-blue-500 transition-all duration-300 hover:bg-blue-900 text-white "
+              className="bg-blue-500 transition-all duration-500 hover:bg-blue-900 text-white "
               asChild
             >
               <Link href={testimonial.linkedIn}>View on LinkedIn</Link>

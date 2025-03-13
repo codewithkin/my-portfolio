@@ -27,7 +27,7 @@ function Projects() {
           Recent Projects
         </h3>
         <p className="text-muted-foreground text-lg mt-4">
-          A look at some of the work I’ve done.
+          A look at some of the work I&apos;ve done.
         </p>
       </div>
 

@@ -42,7 +42,7 @@ function Services() {
       </article>
 
       {/* Bento Grid Layout */}
-      <article className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12">
+      <article className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
         {services.map((service: Service, index: number) => {
           const IconComponent = service.icon; // Extract the icon component
 

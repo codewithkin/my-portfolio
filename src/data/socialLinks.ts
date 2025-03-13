@@ -7,16 +7,16 @@ export const socialLinks = [
   {
     id: 2,
     name: "X",
-    url: "https://github.com/codewithkin",
+    url: "https://x.com/codewithkin",
   },
   {
     id: 3,
     name: "Whatsapp",
-    url: "https://github.com/codewithkin",
+    url: "wa.link/xxuot6",
   },
   {
     id: 4,
     name: "LinkedIn",
-    url: "https://github.com/codewithkin",
+    url: "https://www.linkedin.com/in/kinzinzombe-183022239",
   },
 ];

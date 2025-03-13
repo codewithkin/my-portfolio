@@ -14,7 +14,7 @@ export const services = [
     title: "Web App Development",
     description:
       "I build fast, scalable, and modern web apps that work smoothly across devices. Whether it’s a startup MVP or a full-scale platform, I’ve got you covered.",
-    action: "/#projects",
+    action: "/projects",
     actionText: "Show me what you’ve built",
     bg: "/images/backgrounds/web-dev-bg.jpg",
     icon: Code,
@@ -43,7 +43,7 @@ export const services = [
     title: "SEO & Performance",
     description:
       "Your website deserves to be seen! I optimize speed, accessibility, and search rankings to make sure your site performs at its best.",
-    action: "/#seo",
+    action: "https://calendly.com/codewithkin/15-minute-call",
     actionText: "Let’s get my site noticed",
     icon: Search,
   },

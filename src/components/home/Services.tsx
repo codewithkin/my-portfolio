@@ -43,11 +43,11 @@ function Services() {
           return (
             <Card
               key={service.id}
-              className={`relative overflow-hidden text-white bg-cover bg-center p-6 flex flex-col justify-between
+              className={`relative overflow-hidden ${service.bg && "text-white backdrop-blur-2xl"} bg-cover bg-center p-6 flex flex-col justify-between
                 ${index === 0 ? "col-span-2 md:col-span-3" : ""}
                 ${index === 1 ? "col-span-2 md:col-span-2" : ""}
                 ${index === 2 ? "col-span-2 md:col-span-5" : ""}
-                ${index === 3 || index === 4 ? "col-span-2 md:col-span-2" : ""}
+                ${index === 3 || index === 4 ? "col-span-2" : ""}
               `}
               style={{ backgroundImage: `url(${service.bg})` }}
             >

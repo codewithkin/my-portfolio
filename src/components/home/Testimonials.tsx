@@ -46,22 +46,17 @@ function Testimonials() {
               opacity: 0,
               y: 300,
             }}
-            
             key={testimonial.id}
-
             whileInView={{
               opacity: 1,
               y: 1,
             }}
-
             viewport={{ once: true }}
-
             transition={{
-                delay: index * 0.8,
-                bounce: 0,
-                duration: 0.3
+              delay: index * 0.8,
+              bounce: 0,
+              duration: 0.3,
             }}
-
             className="rounded-2xl bg-gradient-to-t from-slate-400 to-slate-800 text-white hover:border hover:border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 border border-slate-300 md:p-16 p-8 flex flex-col gap-8"
           >
             <Avatar className="w-24 h-24">
@@ -86,11 +81,11 @@ function Testimonials() {
               asChild
             >
               <Link href={testimonial.linkedIn}>
-                <Image 
-                    alt="LinkedIn icon"
-                    src="/images/icons/linkedin.png"
-                    width="32"
-                    height="32"
+                <Image
+                  alt="LinkedIn icon"
+                  src="/images/icons/linkedin.png"
+                  width="32"
+                  height="32"
                 />
                 View on LinkedIn
               </Link>

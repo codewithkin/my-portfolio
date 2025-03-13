@@ -10,14 +10,14 @@ import { Button } from "@/components/ui/button";
 function Projects() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { align: "start", loop: true },
-    [Autoplay({ delay: 4000 })] // Auto-scroll every 4 seconds
+    [Autoplay({ delay: 4000 })], // Auto-scroll every 4 seconds
   );
 
   const scrollTo = useCallback(
     (index: number) => {
       if (emblaApi) emblaApi.scrollTo(index);
     },
-    [emblaApi]
+    [emblaApi],
   );
 
   return (
@@ -59,7 +59,11 @@ function Projects() {
                 </div>
                 <div className="mt-6 flex gap-4">
                   <Button asChild>
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       View Live Project
                     </a>
                   </Button>

@@ -1,11 +1,14 @@
 "use client";
 import HeadingBadge from "@/components/reusable/HeadingBadge";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { Code, Briefcase, Rocket, BrainCircuit, Heart } from "lucide-react";
+import Link from "next/link";
 
 function About() {
   return (
-    <section className="flex flex-col items-center text-center">
+    <section className="flex flex-col items-center text-center pb-20">
       {/* Hero Section */}
       <motion.header 
         className="header-custom mb-12"
@@ -22,86 +25,65 @@ function About() {
         </article>
       </motion.header>
 
-      {/* The Journey Section */}
-      <div className="flex flex-col gap-12 w-full max-w-5xl text-left">
-        
-        {/* How It All Started */}
-        <motion.div
-          className="flex flex-col gap-4"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <h3 className="text-2xl font-bold text-primary">How It All Started</h3>
-          <p className="text-slate-700">
-            Five years ago, I stumbled upon coding out of pure curiosity. I remember the thrill of writing my first "Hello, World!" and realizing I had just instructed a machine to do something. That moment sparked a deep fascination—I wanted to understand how things worked, how websites came to life, and how I could create something meaningful with just a keyboard.
-          </p>
-        </motion.div>
+      {/* Profile Picture Section */}
+      <div className="w-40 h-40 rounded-full bg-gray-300 shadow-lg mb-8">
+        {/* Insert your image here */}
+        {/* Example: <img src="/your-photo.jpg" className="w-full h-full rounded-full object-cover" alt="Kin Leon Zinzombe" /> */}
+      </div>
 
-        {/* Early Struggles & First Wins */}
-        <motion.div
-          className="flex flex-col gap-4"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <h3 className="text-2xl font-bold text-primary">From Struggles to First Wins</h3>
-          <p className="text-slate-700">
-            Like most self-taught developers, the beginning was tough. I spent countless nights debugging errors that didn't make sense, wrestling with JavaScript, and questioning if I was cut out for this. But then, I built my first real project—a simple to-do app. It was nothing groundbreaking, but seeing something I built actually work was a game-changer. That win fueled me to keep pushing forward.
-          </p>
-        </motion.div>
+      {/* Timeline Container */}
+      <div className="relative w-full max-w-4xl">
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-300"></div>
 
-        {/* Stepping Into the Industry */}
-        <motion.div
-          className="flex flex-col gap-4"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <h3 className="text-2xl font-bold text-primary">Breaking Into the Industry</h3>
-          <p className="text-slate-700">
-            As my skills grew, so did my ambition. I started freelancing, taking on small gigs, and eventually landed my first real software engineering job at CST. It was a whole new level—working with teams, building scalable applications, and learning how to write clean, maintainable code. This experience reinforced one thing: problem-solving through code was what I wanted to do for the rest of my life.
-          </p>
-        </motion.div>
-
-        {/* Growth & Mastery */}
-        <motion.div
-          className="flex flex-col gap-4"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <h3 className="text-2xl font-bold text-primary">Mastering My Craft</h3>
-          <p className="text-slate-700">
-            Over the years, I’ve worked on a range of projects—from mobile apps and web platforms to AI-powered chatbots. I’ve learned that the best developers aren’t the ones who know everything but the ones who never stop learning. Now, I specialize in full-stack development, building robust applications, and constantly refining my skills to stay ahead.
-          </p>
-        </motion.div>
-
-        {/* Philosophy & Passion */}
-        <motion.div
-          className="flex flex-col gap-4"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <h3 className="text-2xl font-bold text-primary">My Philosophy</h3>
-          <p className="text-slate-700">
-            I believe in writing code that is not just functional but also **elegant and maintainable**. To me, great software isn't just about solving a problem—it's about creating an experience. Every project I take on is an opportunity to push boundaries, learn something new, and deliver something that truly matters.
-          </p>
-        </motion.div>
-
-        {/* Beyond Code */}
-        <motion.div
-          className="flex flex-col gap-4"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <h3 className="text-2xl font-bold text-primary">Beyond Code</h3>
-          <p className="text-slate-700">
-            When I'm not deep in code, I’m probably reading, exploring new tech trends, or brainstorming the next big idea. I love working on passion projects, helping other developers, and constantly challenging myself to create something innovative.
-          </p>
-        </motion.div>
+        {/* Timeline Items */}
+        {[
+          { 
+            id: "01", 
+            icon: <Code className="w-8 h-8 text-primary" />, 
+            title: "How It All Started", 
+            description: "Five years ago, I stumbled upon coding out of pure curiosity. Writing my first 'Hello, World!' sparked a deep fascination with building things from scratch." 
+          },
+          { 
+            id: "02", 
+            icon: <BrainCircuit className="w-8 h-8 text-primary" />, 
+            title: "First Struggles & Wins", 
+            description: "Debugging errors all night, fighting with JavaScript—it was tough. But building my first real project, a simple to-do app, was a game-changer." 
+          },
+          { 
+            id: "03", 
+            icon: <Briefcase className="w-8 h-8 text-primary" />, 
+            title: "Breaking Into the Industry", 
+            description: "I started freelancing, landing small gigs, and eventually got my first software engineering role at CST, where I learned to build real-world applications." 
+          },
+          { 
+            id: "04", 
+            icon: <Rocket className="w-8 h-8 text-primary" />, 
+            title: "Mastering My Craft", 
+            description: "From mobile apps to AI chatbots, I kept refining my skills, focusing on full-stack development and scalable solutions." 
+          },
+          { 
+            id: "05", 
+            icon: <Heart className="w-8 h-8 text-primary" />, 
+            title: "Beyond Code", 
+            description: "Outside of coding, I explore new tech, brainstorm ideas, and work on passion projects that push the limits of creativity and innovation." 
+          }
+        ].map((step, index) => (
+          <motion.div 
+            key={step.id} 
+            className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'} items-center mb-12`}
+            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+          >
+            <div className="w-1/2 flex flex-col items-center text-center px-6">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 shadow-md">
+                {step.icon}
+              </div>
+              <h3 className="text-xl font-bold text-primary mt-4">{step.id}. {step.title}</h3>
+              <p className="text-slate-700 mt-2">{step.description}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
 
       {/* Call to Action */}
@@ -117,6 +99,13 @@ function About() {
               Want to collaborate or just chat about tech? Let's connect! 🚀
             </p>
           </CardContent>
+          <CardFooter className="flex flex-col justify-center items-center">
+            <Button asChild>
+              <Link href="https://calendly.com/codewithkin/15-minute-call">
+                Let's talk
+              </Link>
+            </Button>
+          </CardFooter>
         </Card>
       </motion.div>
     </section>

@@ -21,17 +21,17 @@ export const metadata: Metadata = {
     "Freelance Developer",
     "Web Development",
   ],
-  authors: [{ name: "Kin Leon Zinzombe", url: "https://yourdomain.com" }],
+  authors: [{ name: "Kin Leon Zinzombe", url: "https://codewithkin.space" }],
   creator: "Kin Leon Zinzombe",
   openGraph: {
-    title: "Kin Leon Zinzombe | Full-Stack Developer & AI Enthusiast",
+    title: "Kin Leon Zinzombe | Full-Stack Developer",
     description:
       "Building web, mobile, and AI-powered apps that make a difference. Check out my work!",
-    url: "https://yourdomain.com",
+    url: "https://codewithkin.space",
     siteName: "Kin Leon Zinzombe",
     images: [
       {
-        url: "https://yourdomain.com/og-image.jpg", // Replace with your actual OG image URL
+        url: "https://codewithkin.space/og-image.jpg", // Replace with your actual OG image URL
         width: 1200,
         height: 630,
         alt: "Kin Leon Zinzombe Portfolio",
@@ -46,10 +46,10 @@ export const metadata: Metadata = {
       "Passionate about building web, mobile, and AI-powered apps. Check out my portfolio!",
     site: "@yourtwitterhandle", // Replace with your Twitter handle
     creator: "@yourtwitterhandle",
-    images: ["https://yourdomain.com/og-image.jpg"],
+    images: ["https://codewithkin.space/og-image.jpg"],
   },
   robots: "index, follow",
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://codewithkin.space"),
 };
 
 const satoshi = localFont({

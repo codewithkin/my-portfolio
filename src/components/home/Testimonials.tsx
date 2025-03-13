@@ -1,12 +1,12 @@
-import React from "react";
+"use client";
 import ScrollInView from "../reusable/ScrollInView";
 import HeadingBadge from "../reusable/HeadingBadge";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 import { testimonials } from "@/data/testimonials";
 import { Testimonial } from "@/types/testimonials";
-import { Card } from "../ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 function Testimonials() {
@@ -18,7 +18,9 @@ function Testimonials() {
           <HeadingBadge>Testimonials</HeadingBadge>
           <h2 className="heading">Happy Clients, Real Results</h2>
           <p className="text-xl text-slate-600 font-regular">
-          Great software isn’t just about clean code—it’s about impact. Here’s what people I’ve worked with have to say about the products we’ve built together.
+            Great software isn’t just about clean code—it’s about impact. Here’s
+            what people I’ve worked with have to say about the products we’ve
+            built together.
           </p>
         </article>
 
@@ -36,35 +38,51 @@ function Testimonials() {
       </article>
 
       {/* Testimonials cards */}
-      <article className="grid lg:grid-cols-3 sm:grid-cols-2 gap-8 items-center my-16">
-        {
-            testimonials.map((testimonial: Testimonial) => (
-                <article className="rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-300 hover:cursor-pointer p-8 flex flex-col gap-8">
-                    <Avatar>
-                        <AvatarFallback className="border-2 w-8 h-8 transition-all duration-300 border-purple-400 hover:cursor-pointer hover:border-purple-600">
-                            {testimonial.name[0] || "P"}
-                        </AvatarFallback>
-                        <AvatarImage
-                            src={testimonial.imageUrl}
-                        />
-                    </Avatar>
+      <article className="grid lg:grid-cols-3 sm:grid-cols-2 w-full gap-8 items-center my-16 grid-rows-1">
+        {testimonials.map((testimonial: Testimonial) => (
+          <motion.article
+            initial={{
+              display: "none",
+              opacity: 0,
+              y: -100,
+            }}
+            
+            key={testimonial.id}
 
-                    {/* Personal info */}
-                    <article className="flex flex-col gap-2 justify-center">
-                        <h3 className="font-semibold text-primary text-xl">{testimonial.name}</h3>
-                        <h4>{testimonial.role}</h4>
-                    </article>
+            animate={{
+              display: "flex",
+              flexDirection: "column",
+              opacity: 1,
+              y: 1,
+            }}
 
-                    <p className="text-slate-600">{testimonial.content}</p>
+            className="rounded-xl bg-gradient-to-t from-slate-400 to-slate-800 text-white hover:border hover:border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 border border-slate-300 md:p-16 p-8 flex flex-col gap-8"
+          >
+            <Avatar className="w-16 h-16">
+              <AvatarFallback className="border-2 transition-all duration-300 border-purple-400 hover:cursor-pointer hover:border-purple-600">
+                {testimonial.name[0] || "P"}
+              </AvatarFallback>
+              <AvatarImage src={testimonial.imageUrl} />
+            </Avatar>
 
-                    <Button className="bg-blue-500 transition-all duration-300 hover:bg-blue-900 text-white " asChild>
-                        <Link href={testimonial.linkedIn}>
-                            View on LinkedIn
-                        </Link>
-                    </Button>
-                </article>
-            ))
-        }
+            {/* Personal info */}
+            <article className="flex flex-col gap-2 justify-center">
+              <h3 className="font-semibold text-slate-300 text-xl">
+                {testimonial.name}
+              </h3>
+              <h4>{testimonial.role}</h4>
+            </article>
+
+            <p className="text-slate-300">{testimonial.content}</p>
+
+            <Button
+              className="bg-blue-500 transition-all duration-300 hover:bg-blue-900 text-white "
+              asChild
+            >
+              <Link href={testimonial.linkedIn}>View on LinkedIn</Link>
+            </Button>
+          </motion.article>
+        ))}
       </article>
     </ScrollInView>
   );

@@ -9,7 +9,7 @@ function Home() {
       <Mission />
       <Services />
     </>
-  )
+  );
 }
 
 export default Home;

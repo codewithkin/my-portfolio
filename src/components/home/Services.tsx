@@ -4,7 +4,13 @@ import HeadingBadge from "../reusable/HeadingBadge";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
 import { services } from "@/data/services";
 import { Service } from "@/types/services";
 
@@ -43,7 +49,7 @@ function Services() {
           return (
             <Card
               key={service.id}
-              className={`relative overflow-hidden ${service.bg && "text-white backdrop-blur-2xl"} bg-cover bg-center p-6 flex flex-col justify-between
+              className={`relative hover:shadow-lg transition-all duration-300 hover:cursor-pointer overflow-hidden ${service.bg && "text-white backdrop-blur-2xl"} bg-cover bg-center p-6 flex flex-col justify-between
                 ${index === 0 ? "col-span-2 md:col-span-3" : ""}
                 ${index === 1 ? "col-span-2 md:col-span-2" : ""}
                 ${index === 2 ? "col-span-2 md:col-span-5" : ""}
@@ -51,16 +57,24 @@ function Services() {
               `}
               style={{ backgroundImage: `url(${service.bg})` }}
             >
-              <CardHeader className="flex items-center gap-4">
-                <IconComponent size={32} className="text-white" />
-                <CardTitle className="text-white">{service.title}</CardTitle>
+              <CardHeader className="flex items-start gap-4">
+                <article className={`rounded-full p-4 bg-gradient-to-tr from-sky-300 to-blue-600 text-white hover:cursor-pointer hover:from-blue-600 hover:to-purple-300 transition-all duration-500`}>
+                  <IconComponent size={32} className="" />
+                </article>
+                <CardTitle className="text-2xl">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-white">{service.description}</p>
+                <p className="text-md">{service.description}</p>
               </CardContent>
               <CardFooter>
-                <Button asChild variant="outline" className="text-white border-white hover:bg-white hover:text-black">
-                  <Link href={service.action}>{service.actionText}</Link>
+                <Button asChild variant="outline" className={`font-medium ${service.bg ? "bg-white text-primary" : "bg-primary text-white hover:bg-slate-900 hover:text-white"}`}>
+                  <Link
+                    className={` ${service.bg && "text-primary"} flex gap-2 transition-all duration-300 hover:gap-4 items-center`}
+                    href={service.action}
+                  >
+                    {service.actionText}
+                    <ArrowRight size={20} strokeWidth={1.5} />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>

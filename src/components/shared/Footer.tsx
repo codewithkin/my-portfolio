@@ -32,7 +32,7 @@ function Footer() {
         {/* Links */}
         <article className="flex gap-4 items-center">
           {socialLinks.map((socialLink, index: number) => (
-            <Link target="_blank" href={socialLink.url}>
+            <Link key={socialLink.id} target="_blank" href={socialLink.url}>
               <Image
                 key={socialLink.id}
                 width={32}

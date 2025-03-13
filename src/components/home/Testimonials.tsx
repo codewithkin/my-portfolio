@@ -30,6 +30,11 @@ function Testimonials() {
           </Link>
         </Button>
       </article>
+
+      {/* Testimonials cards */}
+      <article className="flex gap-8 items-center">
+        
+      </article>
     </ScrollInView>
   );
 }

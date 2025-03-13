@@ -127,4 +127,12 @@
   .heading {
     @apply text-5xl font-bold text-center text-primary;
   }
+
+  .main-heading {
+    @apply text-5xl font-semibold text-center
+  }
+
+  .header-custom {
+    @apply py-20 text-center flex flex-col justify-center items-center
+  }
 }

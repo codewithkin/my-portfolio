@@ -10,10 +10,10 @@ function Home() {
     <>
       <Header />
       <Mission />
+      <MyProcess />
       <Services />
       <Testimonials />
       <Projects />
-      <MyProcess />
     </>
   );
 }

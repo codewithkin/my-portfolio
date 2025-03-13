@@ -9,10 +9,10 @@ function Services() {
   return (
     <ScrollInView>
         <article className="w-full flex items-end justify-between">
-            <article className="flex flex-col gap-4">
+            <article className="flex flex-col gap-4 text-start items-start justify-start">
                 <HeadingBadge>Services</HeadingBadge>
-                <h2 className="heading">Services to fit all your needs</h2>
-                <p className="text-lg text-slate-600 font-regular">Whatever you need, I can build it—fast and flawlessly.</p>
+                <h2 className="heading">Software So Good, It Speaks for Itself</h2>
+                <p className="text-xl text-slate-600 font-regular">Need a website? An app? Something totally unique? I turn ideas into smooth, fast, and user-friendly software—no hassle</p>
             </article>
 
             {/* CTA */}

@@ -73,6 +73,7 @@ function Services() {
                   <Link
                     className={` ${service.bg && "text-primary"} flex gap-2 transition-all duration-300 hover:gap-4 items-center`}
                     href={service.action}
+                    target="_blank"
                   >
                     {service.actionText}
                     <ArrowRight size={20} strokeWidth={1.5} />

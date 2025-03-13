@@ -34,18 +34,18 @@ export const metadata: Metadata = {
         url: "https://codewithkin.space/og-image.jpg", // Replace with your actual OG image URL
         width: 1200,
         height: 630,
-        alt: "Kin Leon Zinzombe Portfolio",
+        alt: "Kin Leon Zinzombe's Portfolio",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kin Leon Zinzombe | Full-Stack Developer & AI Enthusiast",
+    title: "Kin Leon Zinzombe | Full-Stack Developer",
     description:
       "Passionate about building web, mobile, and AI-powered apps. Check out my portfolio!",
-    site: "@yourtwitterhandle", // Replace with your Twitter handle
-    creator: "@yourtwitterhandle",
+    site: "@codewithkin", // Replace with your Twitter handle
+    creator: "@codewithkin",
     images: ["https://codewithkin.space/og-image.jpg"],
   },
   robots: "index, follow",

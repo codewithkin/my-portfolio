@@ -23,7 +23,7 @@ function Projects() {
   return (
     <section className="py-16">
       <div className="mx-auto text-center">
-        <h3 className="text-4xl md:text-7xl lg:text-9xl font-bold text-primary">
+        <h3 className="text-4xl md:text-7xl font-bold text-primary">
           Recent Projects
         </h3>
         <p className="text-muted-foreground text-lg mt-4">

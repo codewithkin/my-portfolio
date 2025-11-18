@@ -33,7 +33,7 @@ function Services() {
         <Button asChild>
           <Link
             className="flex gap-2 items-center transition-all duration-300 hover:gap-4"
-            href="https://calendly.com/codewithkin/15-minute-call"
+            href="https://calendly.com/codewithkin/client-project-brief"
             target="_blank"
           >
             Book a call

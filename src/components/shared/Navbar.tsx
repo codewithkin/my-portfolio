@@ -83,7 +83,7 @@ function Navbar() {
       {/* CTA */}
       <Link
         className="rounded-full transition-all duration-300 bg-secondary hover:bg-slate-900 text-white py-4 px-6 font-medium"
-        href="https://calendly.com/codewithkin/15-minute-call"
+        href="https://calendly.com/codewithkin/client-project-brief"
         target="_blank"
       >
         Book a call

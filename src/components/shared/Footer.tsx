@@ -21,7 +21,7 @@ function Footer() {
         <Button variant="default" className="hover:bg-slate-900" asChild>
           <Link
             target="_blank"
-            href="https://calendly.com/codewithkin/15-minute-call"
+            href="https://calendly.com/codewithkin/client-project-brief"
           >
             Book a call
             <ArrowRight strokeWidth={1.5} size={20} />

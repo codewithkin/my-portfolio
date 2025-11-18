@@ -12,7 +12,7 @@ export const socialLinks = [
   {
     id: 3,
     name: "Whatsapp",
-    url: "wa.link/xxuot6",
+    url: "wa.link/b9jgvx",
   },
   {
     id: 4,

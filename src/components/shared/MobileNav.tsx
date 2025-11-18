@@ -92,7 +92,7 @@ function MobileNav() {
           >
             <Link
               className="rounded-full transition-all duration-300 bg-secondary font-medium hover:bg-slate-900 text-white py-4 px-6 flex flex-col justify-center items-center"
-              href="https://calendly.com/codewithkin/15-minute-call"
+              href="https://calendly.com/codewithkin/client-project-brief"
               target="_blank"
             >
               Book a call
